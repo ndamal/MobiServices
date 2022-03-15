@@ -17,5 +17,5 @@ public class Bill {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idBill;
     private Long idReservation;
-    private TypePaiement typePaiement;
+    private String moyenPaiement;
 }

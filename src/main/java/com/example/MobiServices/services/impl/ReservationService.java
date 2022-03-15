@@ -1,9 +1,11 @@
 package com.example.MobiServices.services.impl;
 
+import com.example.MobiServices.entities.Bill;
 import com.example.MobiServices.entities.Bus;
 import com.example.MobiServices.entities.Client;
 import com.example.MobiServices.entities.Reservation;
 import com.example.MobiServices.exceptions.MobiException;
+import com.example.MobiServices.repositories.BillRepository;
 import com.example.MobiServices.repositories.BusRepository;
 import com.example.MobiServices.repositories.ClientRepository;
 import com.example.MobiServices.repositories.ReservationRepository;
@@ -23,6 +25,7 @@ public class ReservationService implements IReservationService {
     private final ReservationRepository reservationRepository;
     private final ClientRepository clientRepository;
     private final BusRepository busRepository;
+    private final BillRepository billRepository;
 
 
 
@@ -77,6 +80,8 @@ public class ReservationService implements IReservationService {
             r.setIsPayed(true);
             reservationRepository.save(r);
             ret = true;
+            billRepository.save(new Bill(null,r.getIdReservation(),r.getMoyenPaiement()));
+
         }
 
         return ret;
