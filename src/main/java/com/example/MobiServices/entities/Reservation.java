@@ -1,5 +1,6 @@
 package com.example.MobiServices.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,4 +20,6 @@ public class Reservation {
     private Date dateTrajet;
     private Long identifiant;
     private Long numBus;
+    private double prix;
+    private Boolean ispayed;
 }

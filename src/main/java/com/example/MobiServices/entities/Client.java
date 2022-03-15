@@ -20,6 +20,4 @@ public class Client {
     private String email;
     private int numCarte;
     private Date datExpcarte;
-    /*@OneToMany( targetEntity=Reservation.class, mappedBy="identifiant")
-    private List<Reservation> reservations = new ArrayList<>();*/
 }
