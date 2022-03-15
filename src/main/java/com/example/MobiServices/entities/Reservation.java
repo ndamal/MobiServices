@@ -21,5 +21,7 @@ public class Reservation {
     private Long identifiant;
     private Long numBus;
     private double prix;
-    private Boolean ispayed;
+    private String typePaiement;
+    private String moyenPaiement;
+    private Boolean isPayed;
 }
