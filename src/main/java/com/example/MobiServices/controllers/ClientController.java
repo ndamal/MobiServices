@@ -18,9 +18,8 @@ public class ClientController {
 
     private final IClientService iClientService;
 
-
     @PostMapping("/")
     public Client addClient(@RequestBody Client client) {
-        return  iClientService.addClient(client);
+        return iClientService.addClient(client);
     }
 }

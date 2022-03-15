@@ -19,21 +19,19 @@ public class ReservationController {
         this.iReservationService = iReservationService;
     }
 
-
-
     @GetMapping("/")
     public List<Reservation> allReservation() {
-        return  iReservationService.allReservation();
+        return iReservationService.allReservation();
     }
 
     @PostMapping("/")
     public Reservation addReservation(@RequestBody Reservation reservation) {
-        return  iReservationService.addReservation(reservation);
+        return iReservationService.addReservation(reservation);
     }
 
     @GetMapping("/{id}")
     public Reservation getReservation(@PathVariable(name = "id") Long id) {
-        return  iReservationService.getReservationById(id);
+        return iReservationService.getReservationById(id);
     }
 
     @DeleteMapping("/{id}")
@@ -43,6 +41,6 @@ public class ReservationController {
 
     @PutMapping("/{id}")
     public Boolean resrever(@PathVariable Long id, @RequestBody Reservation reservation) {
-        return  iReservationService.payReservation(id);
+        return iReservationService.payReservation(id);
     }
 }

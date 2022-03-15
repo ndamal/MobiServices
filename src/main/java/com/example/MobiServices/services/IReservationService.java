@@ -10,13 +10,13 @@ import java.util.List;
 public interface IReservationService {
 
 
-     List<Reservation> allReservation();
+    List<Reservation> allReservation();
 
-     Reservation addReservation(Reservation reservation);
+    Reservation addReservation(Reservation reservation);
 
-     Reservation getReservationById(Long id);
+    Reservation getReservationById(Long id);
 
-     void deleteReservationById(Long id);
+    void deleteReservationById(Long id);
 
-     Boolean  payReservation(Long id);
+    Boolean payReservation(Long id);
 }

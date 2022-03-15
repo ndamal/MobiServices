@@ -19,21 +19,19 @@ public class BusController {
         this.iBusService = iBusService;
     }
 
-
-
     @GetMapping("/")
     public List<Bus> allBus() {
-        return  iBusService.allBus();
+        return iBusService.allBus();
     }
 
     @PostMapping("/")
     public Bus addBus(@RequestBody Bus bus) {
-        return  iBusService.addBus(bus);
+        return iBusService.addBus(bus);
     }
 
     @GetMapping("/{id}")
     public Bus getBus(@PathVariable(name = "id") Long id) {
-        return  iBusService.getBusById(id);
+        return iBusService.getBusById(id);
     }
 
     @DeleteMapping("/{id}")

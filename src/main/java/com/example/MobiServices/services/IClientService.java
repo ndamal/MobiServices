@@ -1,6 +1,5 @@
 package com.example.MobiServices.services;
 
-import com.example.MobiServices.entities.Bus;
 import com.example.MobiServices.entities.Client;
 
 /**

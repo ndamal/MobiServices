@@ -22,7 +22,7 @@ public class BusService implements IBusService {
 
     @Override
     public List<Bus> allBus() {
-        return  busRepository.findAll();
+        return busRepository.findAll();
     }
 
     @Override
@@ -32,7 +32,7 @@ public class BusService implements IBusService {
 
     @Override
     public Bus getBusById(Long id) {
-        return busRepository.findById(id).orElseThrow(()->new MobiException("Le bus avec l'identifiant "+id+" " +
+        return busRepository.findById(id).orElseThrow(() -> new MobiException("Le bus avec l'identifiant " + id + " " +
                 "n'existe pas "));
     }
 
